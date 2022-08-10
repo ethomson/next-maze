@@ -1,0 +1,21 @@
+{
+  "name": "next-maze-ts",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build-wasm": "cd wasm && make && cp maze-c.wasm ../pages/api/maze-c.wasm",
+    "start": "next start",
+    "export": "next export",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^12.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^18.6.5",
+    "@types/react": "^18.0.17",
+    "typescript": "^4.7.4"
+  }
+}

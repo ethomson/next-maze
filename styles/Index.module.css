@@ -1,0 +1,92 @@
+.container {
+  padding: 0 2rem;
+}
+
+.main {
+  min-height: calc(100vh - 7rem);
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  width: 70vw;
+  margin: 0 15vw;
+  flex: 1;
+  padding: 2rem 0;
+  justify-content: space-between;
+  align-items: top;
+}
+
+.metadata {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.metadata a {
+  color: #0070f3;
+}
+
+.mazeMetadata {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+
+.mazeNumber {
+  font-size: 0.75rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.mazeNumber {
+  font-weight: bold;
+}
+
+.mazeContainer {
+  margin-top: 0.75rem;
+  padding: 0;
+}
+
+.mazeWithTitle {
+  height: calc(2rem + 300px);
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.mazeTitle {
+  height: 1.5rem;
+  line-height: 1.5rem;
+  background: #aaaaaa;
+  margin: 0 0.5rem;
+  padding: 0 0.5rem;
+  opacity: 0.5;
+}
+
+.maze {
+  margin: 0 0.5rem;
+  padding: 0;
+  width: 300px;
+  height: 300px;
+  background: #dddddd url('/loading.svg') no-repeat center;
+}
+
+.logo {
+  height: 1em;
+  margin-left: 0.5rem;
+}
+
+.source * {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.source svg {
+  margin-right: 0.5rem;
+}

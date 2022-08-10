@@ -1,0 +1,10 @@
+<svg width="120" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+ .loading { font-size: 15px; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; }
+</style>
+<rect id="loading0" x="0" y="0" width="8" height="8" fill="#888888" />
+<rect id="loading1" x="10" y="0" width="8" height="8" fill="#888888" />
+<rect id="loading2" x="0" y="10" width="8" height="8" fill="#888888" />
+<rect id="loading3" x="10" y="10" width="8" height="8" fill="#888888" />
+<text x="32.5" y="15" class="loading" fill="#888888">Generating...</text>
+</svg>
