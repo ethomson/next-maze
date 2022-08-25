@@ -18,7 +18,12 @@ const SOLUTION_COLOR: string = "var(--solution)";
 
 const ANIMATE: boolean = true;
 const ANIMATE_FINAL: boolean = true;
-const ANIMATION_DELAY: number = 0.0035;
+
+/*
+ * Animate with a delay based on the current average execution time
+ * of this API route to visually compare with the other API routes.
+ */
+const ANIMATION_DELAY: number = 0.0081;
 
 interface Point {
     x: number,
