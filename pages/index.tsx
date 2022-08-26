@@ -31,13 +31,13 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>WASM on the Edge</title>
-        <meta name="description" content="Maze generator and solver in JavaScript and WASM" />
+        <title>Wasm on the Edge</title>
+        <meta name="description" content="Maze generator and solver in JavaScript and Wasm" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        <h1>WASM on the edge!</h1>
+        <h1>Wasm on the edge!</h1>
 
         <div id="mazeContainer" className={styles.mazeContainer}>
           <div className={styles.mazeWithTitle}>
@@ -50,7 +50,7 @@ const Home: NextPage = () => {
 
           <div className={styles.mazeWithTitle}>
             <div className={styles.mazeTitle}>
-              WASM (C) &mdash; 36ms average
+              Wasm (C) &mdash; 36ms average
             </div>
 
             <div id="mazeWasm" className={styles.maze} />
