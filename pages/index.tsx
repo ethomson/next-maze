@@ -34,6 +34,14 @@ const Home: NextPage = () => {
         <title>Wasm on the Edge</title>
         <meta name="description" content="Maze generator and solver in JavaScript and Wasm" />
         <link rel="icon" href="/favicon.ico" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@ethomson" />
+        <meta name="twitter:title" content="Wasm on the Edge" />
+        <meta name="twitter:description" content="Maze solver in JavaScript at Wasm Vercel Edge Functions" />
+        <meta name="twitter:image" content="https://wasm-on-the-edge.vercel.app/screenshot.png" />
+        <meta name="og:title" content="Wasm on the Edge" />
+        <meta name="og:description" content="Maze solver in JavaScript at Wasm Vercel Edge Functions" />
+        <meta name="og:image" content="https://wasm-on-the-edge.vercel.app/screenshot.png" />
       </Head>
 
       <main className={styles.main}>
