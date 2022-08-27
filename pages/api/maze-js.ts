@@ -398,14 +398,17 @@ export default async function handler(req: NextRequest, event: Event): Promise<R
     }
 
     const svgHeader = renderStart();
+    const generateAndSolveStart = new Date().getTime();
     const svgMazeAndSolution = generateAndSolveMaze();
+    const generateAndSolveEnd = new Date().getTime();
     const svgFooter = renderEnd();
 
     const svg = [ svgHeader, svgMazeAndSolution, svgFooter ].join("\n");
 
     return new Response(svg, {
         headers: {
-            "Content-Type": "image/svg+xml"
+            "Content-Type": "image/svg+xml",
+            "Execution-Time": (generateAndSolveEnd - generateAndSolveStart).toString(),
         }
     });
 }

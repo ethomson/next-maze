@@ -134,14 +134,17 @@ export default async function handler(req: NextRequest, event: Event): Promise<R
     let tick = 0.0;
 
     const svgHeader = renderStart();
+    const generateAndSolveStart = new Date().getTime();
     exports.generate_and_solve_maze(MAZE_SIZE.x, MAZE_SIZE.y, seed);
+    const generateAndSolveEnd = new Date().getTime();
     const svgFooter = renderEnd();
 
     const svg = [ svgHeader, svgMaze.join("\n"), svgSolution.join("\n"), svgFooter ].join("\n");
 
     return new Response(svg, {
         headers: {
-            "Content-Type": "image/svg+xml"
+            "Content-Type": "image/svg+xml",
+            "Execution-Time": (generateAndSolveEnd - generateAndSolveStart).toString(),
         }
     });
 }

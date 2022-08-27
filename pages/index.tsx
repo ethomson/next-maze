@@ -19,7 +19,9 @@ const Home: NextPage = () => {
             jsResponse.text(),
             wasmResponse.text()
         ]).then(([ jsSvg, wasmSvg ]) => {
+            document.querySelector("#jsExecutionTime").innerHTML = `${jsResponse.headers.get("Execution-Time")} ms`
             document.querySelector("#mazeJs").innerHTML = jsSvg;
+            document.querySelector("#wasmExecutionTime").innerHTML = `${wasmResponse.headers.get("Execution-Time")} ms`
             document.querySelector("#mazeWasm").innerHTML = wasmSvg;
         });
     });
@@ -49,7 +51,7 @@ const Home: NextPage = () => {
         <div id="mazeContainer" className={styles.mazeContainer}>
           <div className={styles.mazeWithTitle}>
             <div className={styles.mazeTitle}>
-              JavaScript &mdash; 81ms average
+              JavaScript &mdash; <span id="jsExecutionTime">81ms average</span>
             </div>
 
             <div id="mazeJs" className={styles.maze} />
@@ -57,7 +59,7 @@ const Home: NextPage = () => {
 
           <div className={styles.mazeWithTitle}>
             <div className={styles.mazeTitle}>
-              Wasm (C) &mdash; 36ms average
+              Wasm (C) &mdash; <span id="wasmExecutionTime">36ms average</span>
             </div>
 
             <div id="mazeWasm" className={styles.maze} />
