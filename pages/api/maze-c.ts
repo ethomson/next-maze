@@ -141,10 +141,13 @@ export default async function handler(req: NextRequest, event: Event): Promise<R
 
     const svg = [ svgHeader, svgMaze.join("\n"), svgSolution.join("\n"), svgFooter ].join("\n");
 
-    return new Response(svg, {
+    const response = await new Response(svg, {
         headers: {
             "Content-Type": "image/svg+xml",
-            "Execution-Time": (new Date().getTime() - generateAndSolveStart).toString(),
         }
     });
+
+    response.headers.set("execution-time", (new Date().getTime() - generateAndSolveStart).toString())
+
+    return response
 }

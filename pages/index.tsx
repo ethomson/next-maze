@@ -19,9 +19,9 @@ const Home: NextPage = () => {
             jsResponse.text(),
             wasmResponse.text()
         ]).then(([ jsSvg, wasmSvg ]) => {
-            document.querySelector("#jsExecutionTime").innerHTML = `${jsResponse.headers.get("Execution-Time")} ms`
+            document.querySelector("#jsExecutionTime").innerHTML = `${jsResponse.headers.get("execution-time")} ms`
             document.querySelector("#mazeJs").innerHTML = jsSvg;
-            document.querySelector("#wasmExecutionTime").innerHTML = `${wasmResponse.headers.get("Execution-Time")} ms`
+            document.querySelector("#wasmExecutionTime").innerHTML = `${wasmResponse.headers.get("execution-time")} ms`
             document.querySelector("#mazeWasm").innerHTML = wasmSvg;
         });
     });
